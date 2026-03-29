@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>San Joaquin Valley Town Hall</title>
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/normalize.css">
@@ -11,18 +13,19 @@
 
 <body>
 	<header>
-		<img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
+		<img src="images/town_hall_logo.gif" alt="Town Hall logo">
 		<h2>San Joaquin Valley Town Hall</h2>
 		<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
 	</header>
 
-	<nav>
+	<nav id="nav_menu">
+		<label for="nav-toggle" class="nav-toggle-label">&#9776; MENU</label>
+		<input type="checkbox" id="nav-toggle" class="nav-toggle">
 		<ul class="nav">
 			<li><a href="index.html" class="current">Home</a></li>
 			<li><a href="speakers.html">Speakers</a></li>
 			<li><a href="luncheons.html">Luncheons</a></li>
 			<li><a href="tickets.html">Tickets</a></li>
-
 			<li class="dropdown">
 				<a href="#">About Us</a>
 				<ul class="submenu">
@@ -57,9 +60,7 @@
 				has focused on the ecology and evolution of late Cretaceous dinosaurs and he has conducted 
 				fieldwork in a number of countries in Africa.</p>
 				<p><a href="speakers/sampson.html">Read more.</a>&nbsp;
-				<a href="../media/sampson.mp4" target="_blank">
-					or Play Video
-				</a>
+				<a href="../media/sampson.mp4" target="_blank">or Play Video</a></p>
 			</article>
 			
 			<h2>Our Ticket Packages</h2>
@@ -72,16 +73,19 @@
 		
 		<aside>
 			<h2>Guest speakers</h2>
-			<h3>October<br><a href="speakers/toobin.html">Jeffrey Toobin</a></h3>
-			<img src="images/toobin75.jpg" alt="Jeffrey Toobin photo">
-			<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
-			<img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
-			<h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
-			<img src="images/chua75.jpg" alt="Amy Chua photo">
-			<h3>February<br><a href="speakers/sampson.html">Scott Sampson</a></h3>
-			<img src="images/sampson75.jpg" alt="Scott Sampson photo">
+			<div class="speakers-list">
+				<h3>October<br><a href="speakers/toobin.html">Jeffrey Toobin</a></h3>
+				<img src="images/toobin75.jpg" alt="Jeffrey Toobin photo">
+				<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
+				<img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
+				<h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
+				<img src="images/amyChua.jpg" alt="Amy Chua photo">
+				<h3>February<br><a href="speakers/sampson.html">Scott Sampson</a></h3>
+				<img src="images/sampson75.jpg" alt="Scott Sampson photo">
+			</div>
 		</aside>
 	</main>
+
 	<footer>
 		<p>&copy; 2018, San Joaquin Valley Town Hall, Fresno, CA 93755</p>
 	</footer>
