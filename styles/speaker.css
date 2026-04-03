@@ -90,6 +90,26 @@ article img {
 	border: 1px solid black;
 }
 
+figure {
+	float: right;
+	margin: .5em 0 1em 1em;
+}
+
+figure img {
+	float: none;
+	margin: 0;
+	border: 1px solid black;
+	display: block;
+}
+
+figcaption {
+	font-size: 85%;
+	font-style: italic;
+	text-align: center;
+	padding-top: .35em;
+	color: #555;
+}
+
 /* the styles for the aside */
 aside {
 	width: 215px;

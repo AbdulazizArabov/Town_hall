@@ -353,7 +353,7 @@ header img {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	width: 160px;
+	width: 100%;
 	z-index: 100;
 }
 
@@ -364,7 +364,6 @@ header img {
 	text-decoration: none;
 	font-family: 'Karla', Arial, sans-serif;
 	border-top: 1px solid #b30000;
-	white-space: nowrap;
 }
 
 .submenu li a:hover {
@@ -385,7 +384,7 @@ main {
    ============================================= */
 
 section {
-	width: 62.5%;
+	width: 73.75%;
 	float: right;
 	padding: 0 2.5% 20px 2.5%;
 	box-sizing: border-box;
@@ -399,7 +398,7 @@ section h1 {
 
 section h2 {
 	color: #800000;
-	font-size: 160%;
+	font-size: 130%;
 }
 
 article + h2 {
@@ -409,7 +408,7 @@ article + h2 {
 }
 
 section p {
-	padding-bottom: .5em;
+	padding-bottom: 1em;
 }
 
 section blockquote {
@@ -526,6 +525,64 @@ footer p {
 	padding: 1em 0;
 }
 
+
+/* =============================================
+   LUNCHEON SCHEDULE TABLE
+   ============================================= */
+
+section figure {
+	margin: 0;
+}
+
+section table {
+	border-collapse: collapse;
+	width: auto;
+	max-width: 100%;
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+	margin: 0 0 1em 0;
+}
+
+section table th,
+section table td {
+	padding: 0.4em 0.75em;
+}
+
+section table thead th {
+	border-bottom: 2px solid #800000;
+	text-align: left;
+}
+
+/* Cost column header: right-aligned */
+section table thead th:last-child {
+	text-align: right;
+}
+
+/* Year column: centered (excludes summary colspan cells) */
+section table tbody td:first-child:not([colspan]) {
+	text-align: center;
+}
+
+/* Cost column: right-aligned */
+section table tbody td:last-child {
+	text-align: right;
+}
+
+/* Summary label cells: right-aligned */
+section table td[colspan="3"] {
+	text-align: right;
+}
+
+/* Group separator: top border on first row of 2016 group and first tfoot row */
+section table tbody tr:nth-child(3) td,
+section table tfoot tr:first-child td {
+	border-top: 2px solid #800000;
+}
+
+/* Border above the Savings row */
+section table tfoot tr:last-child td {
+	border-top: 2px solid #800000;
+}
 
 /* =============================================
    MEDIA QUERY: Tablet portrait (max 959px)
