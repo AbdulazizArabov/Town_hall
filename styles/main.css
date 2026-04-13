@@ -776,3 +776,97 @@ section table tfoot tr:last-child td {
 		column-count: 1;
 	}
 }
+
+form {
+	display: block;
+	width: 100%;
+}
+
+fieldset {
+	margin: 0 0 .5em 0;
+	padding: .5em 1em;
+	border: 1px solid #ccc;
+}
+
+legend {
+	color: black;
+	font-weight: bold;
+}
+
+label {
+	display: block;
+	float: left;
+	clear: left;
+	width: 35%;
+	text-align: right;
+	margin-right: .5em;
+	padding-top: .25em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+	display: block;
+	float: left;
+	width: 60%;
+	margin-bottom: .5em;
+}
+
+input:required,
+select:required,
+input:invalid,
+select:invalid {
+	border: 2px solid #800000;
+	color: #800000;
+}
+
+input:valid,
+select:valid {
+	border: 1px solid black;
+}
+
+#payment_method label {
+	clear: none;
+	display: inline-block;
+	float: none;
+	width: auto;
+	margin-left: 3em;
+}
+
+#payment_method input {
+	width: auto;
+}
+
+#card_type {
+	width: auto;
+}
+
+#exp_month {
+	width: 7em;
+}
+
+#exp_year {
+	width: 5em;
+}
+
+fieldset:last-of-type {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+fieldset:last-of-type legend {
+	text-align: left;
+}
+
+fieldset:last-of-type input[type="submit"],
+fieldset:last-of-type input[type="reset"] {
+	display: inline-block;
+	margin: 0 0.5em;
+}
+
+fieldset::after {
+	content: "";
+	display: table;
+	clear: both;
+}
