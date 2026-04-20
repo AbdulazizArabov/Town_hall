@@ -450,6 +450,12 @@ article img {
 	max-width: 40%;
 	min-width: 150px;
 	height: auto;
+	transition: transform 3s;
+	transform-origin: top left;
+}
+
+article img:hover {
+	transform: rotate(720deg);
 }
 
 /* =============================================
@@ -481,6 +487,33 @@ article.speaker img {
 	border: 1px solid black;
 }
 
+/* Speaker-specific animations */
+article.speaker:nth-of-type(1) img { /* Amy Chua - fade-in */
+	transition: opacity 1s;
+}
+article.speaker:nth-of-type(1) img:hover {
+	opacity: 0.5;
+}
+
+article.speaker:nth-of-type(2) img { /* Jeffrey Toobin - skew */
+	transition: transform 1s;
+}
+article.speaker:nth-of-type(2) img:hover {
+	transform: skewX(15deg);
+}
+
+article.speaker:nth-of-type(3) img { /* Andrew Ross Sorkin - grayscale to color */
+	filter: grayscale(100%);
+	transition: filter 1s;
+}
+article.speaker:nth-of-type(3) img:hover {
+	filter: grayscale(0%);
+}
+
+article.speaker:nth-of-type(4) img:hover {
+	animation: pulse 1s infinite;
+}
+
 /* =============================================
    ASIDE (left sidebar)
    ============================================= */
@@ -508,6 +541,28 @@ aside img {
 	max-width: 100%;
 	height: auto;
 	display: block;
+	animation: moveAndScale 3s 2s 4 alternate;
+}
+
+@keyframes moveAndScale {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+	100% {
+		transform: translate(100px, 20px) scale(1.4);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 /* =============================================
