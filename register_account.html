@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Confirmed &#8211; San Joaquin Valley Town Hall</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .confirmation-box {
+            background: #f9f6f0;
+            border: 2px solid #800000;
+            border-radius: 6px;
+            padding: 2em 2.5em;
+            max-width: 560px;
+            margin: 2em auto;
+            text-align: center;
+        }
+
+        .confirmation-box .checkmark {
+            font-size: 3rem;
+            color: #800000;
+            display: block;
+            margin-bottom: 0.4em;
+        }
+
+        .confirmation-box h2 {
+            color: #800000;
+            margin-top: 0;
+        }
+
+        .confirmation-box .order-id {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin: 0.6em 0 1.2em;
+        }
+
+        .confirmation-box p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0.5em 0;
+        }
+
+        .confirmation-box .back-link {
+            display: inline-block;
+            margin-top: 1.5em;
+            padding: 0.6em 1.6em;
+            background: #800000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .confirmation-box .back-link:hover {
+            background: #600000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
+        <h2>San Joaquin Valley Town Hall</h2>
+        <h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
+    </header>
+
+    <nav id="nav_menu">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776; MENU</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="luncheons.html">Luncheons</a></li>
+            <li><a href="tickets.html" class="current">Tickets</a></li>
+            <li class="dropdown">
+                <a href="#">About Us</a>
+                <ul class="submenu">
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="board.html">Board of Directors</a></li>
+                    <li><a href="past.html">Past Speakers</a></li>
+                    <li><a href="contact.html">Contact Information</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="confirmation-box">
+                <span class="checkmark">&#10003;</span>
+                <h2>Order Confirmed!</h2>
+                <p class="order-id" id="order-id-display"></p>
+                <p id="greeting">Thank you for your order.</p>
+                <p>Your ticket request has been received. A member of our team will be in touch shortly
+                   with payment and delivery details.</p>
+                <p>We look forward to seeing you at the San Joaquin Valley Town Hall!</p>
+                <a href="tickets.html" class="back-link">Place Another Order</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2018, San Joaquin Valley Town Hall, Fresno, CA 93755</p>
+    </footer>
+
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const orderId = params.get("order");
+            const name = params.get("name");
+
+            if (orderId) {
+                document.getElementById("order-id-display").textContent = "Order " + orderId;
+            }
+            if (name) {
+                document.getElementById("greeting").textContent =
+                    "Thank you, " + name + "! Your order has been received.";
+            }
+        })();
+    </script>
+</body>
+
+</html>

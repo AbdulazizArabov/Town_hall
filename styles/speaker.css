@@ -9,7 +9,8 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -140,4 +141,132 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+
+/* =============================================
+   MEDIA QUERY: Tablet portrait (max 959px)
+   ============================================= */
+
+@media only screen and (max-width: 959px) {
+	section h1 {
+		font-size: 135%;
+	}
+	section h2,
+	article h2,
+	aside h2 {
+		font-size: 120%;
+	}
+}
+
+
+/* =============================================
+   MEDIA QUERY: Mobile landscape (max 767px)
+   ============================================= */
+
+@media only screen and (max-width: 767px) {
+
+	/* Body: full width, no side borders */
+	body {
+		margin: 0;
+		border-left: none;
+		border-right: none;
+	}
+
+	/* Header: centered, logo not floated */
+	header {
+		text-align: center;
+		padding: 1em 1em 1.25em 1em;
+	}
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto .5em auto;
+		max-width: 80px;
+		padding: 0;
+	}
+	header h2 {
+		font-size: 150%;
+	}
+	header h3 {
+		font-size: 115%;
+	}
+
+	/* Section and aside: stacked, full width */
+	section {
+		width: 100%;
+		float: none;
+		padding: 0 3% 20px 3%;
+	}
+	aside {
+		width: 100%;
+		float: none;
+		padding: 0 3% 20px 3%;
+		border-top: 2px solid #931420;
+		text-align: center;
+	}
+	aside h2 {
+		margin-top: 1em;
+		margin-bottom: 0.75em;
+	}
+	aside img {
+		margin: 0 auto;
+		padding-bottom: 0.5em;
+	}
+
+	/* Article and figure images: constrained, still floated */
+	article img {
+		max-width: 35%;
+		min-width: 90px;
+	}
+	figure {
+		max-width: 35%;
+		min-width: 90px;
+	}
+}
+
+
+/* =============================================
+   MEDIA QUERY: Mobile portrait (max 479px)
+   ============================================= */
+
+@media only screen and (max-width: 479px) {
+
+	body {
+		font-size: 90%;
+	}
+	header h2 {
+		font-size: 130%;
+	}
+	header h3 {
+		font-size: 100%;
+	}
+	section h1 {
+		font-size: 120%;
+	}
+	article h2 {
+		font-size: 120%;
+	}
+
+	/* Article image: full width, not floated */
+	article img {
+		float: none;
+		max-width: 100%;
+		width: 100%;
+		min-width: unset;
+		margin: 0 0 .75em 0;
+	}
+
+	/* Figure: full width, not floated */
+	figure {
+		float: none;
+		max-width: 100%;
+		width: 100%;
+		min-width: unset;
+		margin: 0 0 .75em 0;
+	}
+	figure img {
+		max-width: 100%;
+		width: 100%;
+	}
 }

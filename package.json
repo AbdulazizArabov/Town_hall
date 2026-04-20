@@ -1,0 +1,9 @@
+{
+  "name": "town-hall",
+  "version": "1.0.0",
+  "description": "San Joaquin Valley Town Hall website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

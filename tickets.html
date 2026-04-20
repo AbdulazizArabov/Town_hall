@@ -40,7 +40,7 @@
     <main>
         <section>
             <h1>Order Form</h1>
-            <form action="register_account.html" method="get">
+            <form action="/submit-order" method="post">
                 <fieldset>
                     <legend>Member Information</legend>
 
@@ -79,7 +79,7 @@
                     </select>
 
                     <label for="ticket-quantity">Number of Tickets:</label>
-                    <input type="text" id="ticket-quantity" name="ticket-quantity" placeholder="Number of single tickets">
+                    <input type="number" id="ticket-quantity" name="ticket-quantity" placeholder="Number of single tickets" min="1">
                 </fieldset>
                 <fieldset id="payment_method">
                     <legend>Payment Method</legend>
